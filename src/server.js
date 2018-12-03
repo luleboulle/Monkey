@@ -38,9 +38,11 @@ app.post('/', function(req, res) {
   /**
    * Listen on provided port, on all network interfaces.
    * 
+   
    * Listen only when database connection is sucessfull
    */
-  app.listen(3000, function() {
-    console.log('Express server listening on port 3000');
+app.listen(process.env.PORT, function() {
+      console.log('Express server listening on port 3000' + process.env.PORT);
+      
   });
 //});
