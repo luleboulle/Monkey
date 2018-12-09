@@ -270,8 +270,8 @@ models.sequelize.sync().then(function() {
    
    * Listen only when database connection is sucessfull
    */
-    app.listen(MYSQL_ADDON_PORT, function() {
-        console.log('Express server listening on port 3000' + MYSQL_ADDON_PORT);
+app.listen(process.env.PORT, function() {
+      console.log('Express server listening on port 3000' + process.env.PORT);
       
   });
 });
