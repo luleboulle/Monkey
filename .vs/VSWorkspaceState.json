@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\config",
-    "\\src\\models"
+    "\\src\\models",
+    "\\src\\views"
   ],
-  "SelectedNode": "\\src\\config\\db.js",
+  "SelectedNode": "\\src\\views\\index.pug",
   "PreviewInSolutionExplorer": false
 }
