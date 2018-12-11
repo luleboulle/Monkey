@@ -1,0 +1,105 @@
+﻿
+
+body {
+    /*background-image: url("../Content/Picture/Background.jpg");*/
+    background: linear-gradient(0deg,rgba(70, 70, 70, 0.59),rgba(212, 212, 212, 0.30)),url("../Content/Picture/Background.jpg");
+    background-attachment: fixed;
+    background-size: 100%;
+    background-position-y: 30%;
+    /*
+    background-color:aqua;
+    */
+}
+
+/*
+h1{
+    color:green;
+
+}
+*/
+
+h26 {
+    font-family: 'Great Vibes', cursive;
+    color: white;
+    font-size: 100px;
+    text-shadow: 20px 12px 2px #333;
+}
+
+/*
+ul {
+    list-style-type: none;
+}
+    */
+
+/*
+.btn-block {
+    width: 70%;
+    margin:auto;
+}
+    */
+
+.size {
+    width: 65%;
+    margin: auto;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+    /*padding: 20px;*/
+    font-size: 50px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+    float: right;
+}
+
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*button*/
+
+.btn-primary {
+    background: #404040;
+    color: #ffffff;
+    outline: 0 none;
+    border: none;
+    margin-top:10px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #757575;
+    box-shadow: none;
+    outline: 0 none;
+    border: none;
+}
+
+.btn-primary:active, .btn-primary.active {
+    background: #b7b7b7;
+    box-shadow: none;
+    outline: 0 none;
+    border: none;
+}
+
