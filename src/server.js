@@ -348,7 +348,7 @@ app.post('/enclos/number', function (req, res) {
 
 })
 // Synchronize models
-models.sequelize.sync({ force: true }).then(function () {
+models.sequelize.sync(/*{ force: true }*/).then(function () {
     /**
      * Listen on provided port, on all network interfaces.
      * 
