@@ -19,7 +19,7 @@ app.set('views', path.join(__dirname, '/views'))
 
 app.use('/Content', express.static(__dirname + '/Content'));
 app.use('/Css', express.static(__dirname + '/Css'));
-app.use('/JS', express.static(__dirname + '/jS'));
+app.use('/JS', express.static(__dirname + '/JS'));
 
 //Association
 models.Monkey.belongsTo(models.Enclos);
