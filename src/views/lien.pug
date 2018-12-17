@@ -8,13 +8,13 @@ html(lang='fr')
 		script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
 		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
-		link(rel='stylesheet', href='Css/StyleSheet.css')
+		link(rel='stylesheet', href='/Css/StyleSheet.css')
 		// Add icon library
 		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 		// GoogleFont
 		link(href='https://fonts.googleapis.com/css?family=Great+Vibes', rel='stylesheet')
 		// Mon script
-		script(src='JS/Script.js')
+		script(src='/JS/Script.js')
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js')
 		script.
 			$(document).ready(function () {
@@ -28,122 +28,99 @@ html(lang='fr')
 	body
 		nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top(style='background-color: #ffffff;')
 			a.navbar-brand.justify-content-start.d-flex(href='#')
-				img(src='Content/Logo/Logo-Texte.png', alt='Logo', style='height:30%; width:30%')
+				img(src='/Content/Logo/Logo-Texte.png', alt='Logo', style='height:30%; width:30%')
 			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
 			#navbarNav.collapse.navbar-collapse.justify-content-center.d-flex
 				ul.navbar-nav
 					li.nav-item.active
-						a.nav-link(href='#Home')
+						a.nav-link(href='/#Home')
 							| Home 
 							span.sr-only (current)
 					li.nav-item
-						a.nav-link(href='#MonkeyManager3000') Monkey Manager 3000
+						a.nav-link(href='/#MonkeyManager3000') Monkey Manager 3000
 					li.nav-item.dropdown
 						a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							| Singes
 						.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-							a.dropdown-item(href='#Singes') Ajouter
-							a.dropdown-item(href='#Singes') Modifier
-							a.dropdown-item(href='#Singes') Supprimer
-							a.dropdown-item(href='#Singes') Afficher
-							a.dropdown-item(href='#Singes') Rechercher
+							a.dropdown-item(href='/#Singes') Ajouter
+							a.dropdown-item(href='/#Singes') Modifier
+							a.dropdown-item(href='/#Singes') Supprimer
+							a.dropdown-item(href='/#Singes') Afficher
+							a.dropdown-item(href='/#Singes') Rechercher
 					li.nav-item.dropdown
 						a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							| Enclos
 						.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-							a.dropdown-item(href='#Enclos') Ajouter
-							a.dropdown-item(href='#Enclos') Modifier
-							a.dropdown-item(href='#Enclos') Supprimer
-							a.dropdown-item(href='#Enclos') Afficher
-							a.dropdown-item(href='#Enclos') Rechercher
+							a.dropdown-item(href='/#Enclos') Ajouter
+							a.dropdown-item(href='/#Enclos') Modifier
+							a.dropdown-item(href='/#Enclos') Supprimer
+							a.dropdown-item(href='/#Enclos') Afficher
+							a.dropdown-item(href='/#Enclos') Rechercher
 					li.nav-item
-						a.nav-link(href='#Contact') Contact
+						a.nav-link(href='/#Contact') Contact
 			a.navbar-brand.justify-content-end.d-flex(href='#')
-				img(src='Content/Logo/Logo.png', alt='Logo', style='height:17%; width:17%;')
+				img(src='/Content/Logo/Logo.png', alt='Logo', style='height:17%; width:17%;')
 				// style="height:30px; margin-left: 30px;">
+		
+		
+		
+		
 		header
-			#Home.text-center(style='height:900px; margin-top:10%;')
-				//
-					<div style="height:150px; background-color: rgba(0, 0, 0, 0.55) ;">
-					<h26>Site en développement</h26>
-					</div>
-				.center-block(style='background-color:rgba(255, 255, 255, 0.43); padding-top:70px;padding-bottom:70px; width:70%;')
-					img(src='Content/Logo/Logo-Complet.png', alt='Logo', style='width:60%;')
+			#Home.text-center(style='height:100px; margin-top:10%;')
+
+			.text-center(style='height:100px; margin-top:5%;')
 			#MonkeyManager3000.center-block(style='background-color:rgba(255, 255, 255, 1); padding-top:70px;padding-bottom:70px; width:100%;  padding-left:70px;  padding-right:70px;')
-				h1 Monkey Manager 3000
-				p
-					br
-					|                     Monkey Manager 3000 est une solution de gestion pour la réserve du parc Henri Vinay.
-					br
-					br
-					|                     Il y a deux notions très importantes au sein de cette solution, les singes et les enclos.
-					br
-					|                     Chacun de ces élément peut être créé, lu en détail, mis à jour, supprimé et lié entre eux.
-					br
-					br
-					|                     Les relations se décrivent comme il suit :
-					br
-				ul
-					li  Un singe appartient à un seul enclos
-					li  Un enclos peut contenir plusieurs singe
-				p
-			.text-center(style='height:100px; margin-top:10%;')
-			#Singes.center-block(style='background-color:rgba(255, 255, 255, 1); padding-top:70px;padding-bottom:70px; width:100%;  padding-left:70px;  padding-right:70px;')
-				h1 Singes :
-				br
-				#AddSinge
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/monkey#AddSinge'") Ajouter
-				#PutSinge
-					button.btn.btn-primary.btn-block(type='button',onclick="window.location.href='/monkey#PutSinge'") Modifier
-				#DelSinge
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/monkey#DelSinge'") Supprimer
-				#ShowSinge
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/monkey'") Afficher
-			.text-center(style='height:100px; margin-top:10%;')
-			#Enclos.center-block(style='background-color:rgba(255, 255, 255, 1); padding-top:70px;padding-bottom:70px; width:100%;  padding-left:70px;  padding-right:70px;')
-				h1 Enclos :
-				br
-				#AddEnclos
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/enclos#AddEnclos'") Ajouter
-				#PutEnclos
-					button.btn.btn-primary.btn-block(type='button',onclick="window.location.href='/enclos#PutEnclos'") Modifier
-				#DelEnclos
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/enclos#DelEnclos'") Supprimer
-				#ShowEnclos
-					button.btn.btn-primary.btn-block(type='button', onclick="window.location.href='/enclos'") Afficher
-			
-			
-			#Contact.text-center(style='height:100px; margin-top:10%;')
-			.center-block(style='background-color:rgba(255, 255, 255, 1); padding-top:70px;padding-bottom:70px; width:100%;  padding-left:70px;  padding-right:70px;')
-				h1 Contact
+
+				h1 Singe choisi :
 				.container
-					br
 					.row
+						.col
 						.col.text-center
-							h2(style='text-decoration:underline;') Chabert Léo
+							h3 Nom :
 						.col.text-center
-							h2(style='text-decoration:underline;') Leboullec Lucile
-					br
-					.row
+							h3 Race :
 						.col.text-center
-							img(src='Content/Picture/moi.png', alt='Logo', style='height:100%; width:70%')
+							h3 Genre :
 						.col.text-center
-							img(src='Content/Picture/lucile.png', alt='Logo', style='height:100%; width:70%')
-					.row(style='margin-top:25px;')
+							h3 Age :
 						.col.text-center
-							// LinkedIn
-							a.btn-floating.btn-gplus(type='button')
-								i.fa.fa-linkedin.fa-2x
-						.col.text-center
-							// LinkedIn
-							a.btn-floating.btn-gplus(type='button')
-								i.fa.fa-linkedin.fa-2x
+							h3 Poids :
+					
+
+					each val in Monkey
+						.row
+							.col
+								p current :
+							.col.text-center
+								p= val.name
+							.col.text-center
+								p= val.race
+							.col.text-center
+								p= val.genre
+							.col.text-center
+								p= val.age
+							.col.text-center
+								p= val.weight
+							
+						
+						.row
+							- var url = '/monkey/lienMonkey/' + val.id
+							a(class='button btn btn-primary btn-block' href= url) Lier/Modifier
+
+						
+
+
+
 			.text-center(style='height:100px; margin-top:10%;')
-		
-		
-		
-		
+			
+
+
+
+
+
+
+
 		// Footer
 		footer.page-footer.font-small.mdb-color.lighten-3.pt-4(style='background-color: #ffffff;')
 			// Footer Links
@@ -154,9 +131,9 @@ html(lang='fr')
 					.col-md-4.col-lg-3.mr-auto.my-md-4.my-0.mt-4.mb-1
 						// Content
 						h5.font-weight-bold.text-uppercase.mb-4 Monkey Manager 3000
-						p Merci d'avoir visité la page de Monkey Manager 3000.
+						p Merci d'avoir visite la page de Monkey Manager 3000.
 						p
-							| Nous esperons que cette aplication aurras répondu a toutes vos attentes.
+							| Nous esperons que cette aplication aurras repondu a toutes vos attentes.
 					// Grid column
 					hr.clearfix.w-100.d-md-none
 					// Grid column
@@ -225,8 +202,8 @@ html(lang='fr')
 					// Grid row
 					// Footer Links
 					// Copyright
-					.footer-copyright.text-center.py-3(style='background-color: #e6e6e6;')
-						| © 2018 Copyright:
-						a(href='http://leochabert.free.fr/')  leochabert.free.fr
+			.footer-copyright.text-center.py-3(style='background-color: #e6e6e6;')
+				|  2018 Copyright:
+				a(href='http://leochabert.free.fr/')  leochabert.free.fr
 					// Copyright
 					// Footer

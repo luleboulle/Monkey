@@ -3,8 +3,7 @@ module.exports = (sequelize, DataTypes) => {
         number: DataTypes.INTEGER,
         oldnumber: DataTypes.INTEGER,
         lieux: DataTypes.STRING,
-        proprete: DataTypes.STRING,
-        nbMonkey: DataTypes.INTEGER
+        proprete: DataTypes.STRING
 
     });
 

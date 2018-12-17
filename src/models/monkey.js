@@ -5,8 +5,7 @@ module.exports = (sequelize, DataTypes) => {
         race: DataTypes.STRING,
         genre: DataTypes.STRING,
         age: DataTypes.INTEGER,
-        weight: DataTypes.FLOAT,
-        enclos: DataTypes.INTEGER,
+        weight: DataTypes.FLOAT
 
     });
 

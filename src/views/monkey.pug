@@ -28,7 +28,7 @@ html(lang='fr')
 	body
 		nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top(style='background-color: #ffffff;')
 			a.navbar-brand.justify-content-start.d-flex(href='#')
-				img(src='Content/Logo/Logo-Texte.png', alt='Logo', style='height:30%; width:30%')
+				img(src='/Content/Logo/Logo-Texte.png', alt='Logo', style='height:30%; width:30%')
 			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 				span.navbar-toggler-icon
 			#navbarNav.collapse.navbar-collapse.justify-content-center.d-flex
@@ -52,15 +52,15 @@ html(lang='fr')
 						a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 							| Enclos
 						.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-							a.dropdown-item(href='/#Enclos') Ajouter
-							a.dropdown-item(href='/#Enclos') Modifier
-							a.dropdown-item(href='/#Enclos') Supprimer
-							a.dropdown-item(href='/#Enclos') Afficher
-							a.dropdown-item(href='/#Enclos') Rechercher
+							a.dropdown-item(href='/enclos#AddEnclos') Ajouter
+							a.dropdown-item(href='/enclos#PutEnclos') Modifier
+							a.dropdown-item(href='/enclos#DelEnclos') Supprimer
+							a.dropdown-item(href='/Enclos') Afficher
+							a.dropdown-item(href='/enclos#Find') Rechercher
 					li.nav-item
 						a.nav-link(href='/#Contact') Contact
 			a.navbar-brand.justify-content-end.d-flex(href='#')
-				img(src='Content/Logo/Logo.png', alt='Logo', style='height:17%; width:17%;')
+				img(src='/Content/Logo/Logo.png', alt='Logo', style='height:17%; width:17%;')
 				// style="height:30px; margin-left: 30px;">
 		
 		
@@ -85,7 +85,8 @@ html(lang='fr')
 						.col.text-center
 							h3 Poids :
 						.col.text-center
-							h3 Enclos : 
+							h3 Lier :
+						
 
 					br
 
@@ -101,8 +102,15 @@ html(lang='fr')
 								p= val.age
 							.col.text-center
 								p= val.weight
-							.col.text-center
-								p= val.enclos
+							
+
+							.col
+								- var url = '/monkey/lien/' + val.id
+								a(class='button btn btn-primary btn-block' href= url) Lier/Modifier
+							
+				
+
+
 				
 
 				br
@@ -127,8 +135,7 @@ html(lang='fr')
 							h3 Age :
 						.col.text-center
 							h3 Poids :
-						.col.text-center
-							h3 Enclos : 
+						
 
 
 					form(method='POST' action='/monkey')
@@ -143,15 +150,14 @@ html(lang='fr')
 								input#age.form-control(type='number', placeholder='Age' name='age')
 							.col
 								input#weight.form-control(type='number', placeholder='Poids' name='weight')
-							.col
-								input#enclos.form-control(type='number', placeholder='Enclos' name='enclos')
+							
 						.row
 							button.btn.btn-primary.btn-block(type='submit') Ajouter
 	
 			.text-center(style='height:100px; margin-top:3%;')
 			#DelSinge.center-block(style='background-color:rgba(255, 255, 255, 1); padding-top:70px;padding-bottom:70px; width:100%;  padding-left:70px;  padding-right:70px;')
 
-				h1 Suprimer un singe :
+				h1 Supprimer un singe :
 				.container
 					form(method='POST' action='/monkey/name')
 						.row
