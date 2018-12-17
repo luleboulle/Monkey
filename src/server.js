@@ -592,7 +592,7 @@ app.delete('/API_enclos/:id', function (req, res) {
 
 
 // Synchronize models
-models.sequelize.sync({ force: true }).then(function () {
+models.sequelize.sync(/*{ force: true }*/).then(function () {
     /**
      * Listen on provided port, on all network interfaces.
      * 
