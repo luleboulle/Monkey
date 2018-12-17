@@ -3,9 +3,11 @@
     "",
     "\\src",
     "\\src\\config",
+    "\\src\\Css",
+    "\\src\\JS",
     "\\src\\models",
     "\\src\\views"
   ],
-  "SelectedNode": "\\src\\views\\index.pug",
+  "SelectedNode": "\\src\\server.js",
   "PreviewInSolutionExplorer": false
 }

@@ -466,6 +466,41 @@ app.delete('/API_monkey/:id', function (req, res) {
 });
 
 
+//obtenir l'id du singe et afficher les enclos
+app.get('/API_monkey/:id', function (req, res) {
+    models.Enclos.findAll({ where: req.query })
+        .then((enclos) => {
+            res.json({ Enclos: enclos, id: req.params.id });
+        })
+})
+
+
+//lier l'id du singe dans l'id de l'enclos
+app.get('/API_monkey/:monkey/:enclos', function (req, res) {
+    models.Enclos.findOne({
+        where: {
+            id: req.params.enclos
+        }
+    })
+        .then((Enclos) => {
+            models.Monkey.findOne({
+                where:
+                {
+                    id: req.params.monkey
+                }
+            })
+                .then((Monkey) => {
+                    Enclos.addMonkey(Monkey).then(() => {
+                        res.send(Monkey)
+                    })
+                })
+                .catch((err) => {
+                    res.json(err)
+                })
+        })
+})
+
+
 
 ///////////////////////////////////////////////////////////-----------ENCLOS-API------------////////////////////////////////////////////////////////////
 
@@ -518,12 +553,17 @@ app.get('/API_enclos/:id', function (req, res) {
         where: { id: req.params.id }
     })
         .then((enclos) => {
-            res.send(enclos);
+            enclos.getMonkey().then(associatedTasks => {
+                res.json({ Enclos: enclos, Monkey: associatedTasks })
+            })
+            
         })
         .catch((err) => {
             res.json(err)
         })
 });
+
+
 
 //mettre a jour tous les enclos
 app.put('/API_enclos', function (req, res) {
