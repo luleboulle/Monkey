@@ -103,8 +103,7 @@ html(lang='fr')
 								p= val.age
 							.col.text-center
 								p= val.weight
-							.col.text-center
-								p= val.enclos
+
 
 						form(method='POST' action='/monkey/name/Modify')
 
@@ -122,8 +121,7 @@ html(lang='fr')
 									input#age.form-control.text-center(type='number', value=val.age name='age')
 								.col
 									input#weight.form-control.text-center(type='number', value=val.weight name='weight')
-								.col
-									input#enclos.form-control.text-center(type='number', value=val.enclos name='enclos' )
+
 							.row
 								button.btn.btn-primary.btn-block(type='submit') Modifier
 							.row 

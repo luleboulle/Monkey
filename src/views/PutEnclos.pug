@@ -96,8 +96,7 @@ html(lang='fr')
 								p= val.lieux
 							.col.text-center
 								p= val.proprete
-							.col.text-center
-								p= val.nbMonkey
+
 							
 
 						form(method='POST' action='/enclos/number/Modify')
@@ -112,8 +111,7 @@ html(lang='fr')
 									input#lieux.form-control.text-center(type='text', value=val.lieux name='lieux')
 								.col
 									input#proprete.form-control.text-center(type='text', value=val.proprete name='proprete')
-								.col
-									input#nbMonkey.form-control.text-center(type='number', value=val.nbMonkey name='nbMonkey')
+
 								
 							.row
 								button.btn.btn-primary.btn-block(type='submit') Modifier
