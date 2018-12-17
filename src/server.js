@@ -598,8 +598,8 @@ models.sequelize.sync({ force: true }).then(function () {
      * 
      * Listen only when database connection is sucessfull
      */
-    app.listen(3000, function () {
-        console.log('Express server listening on port 3000');
+    app.listen(process.env.PORT, function () {
+        console.log('Express server listening on port 3000' + process.env.PORT);
     });
 });
 
